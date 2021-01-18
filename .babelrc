@@ -1,0 +1,30 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {},
+        "transform-runtime": {},
+        "styled-jsx": {},
+        "class-properties": {}
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@src": "./src",
+          "@components": "./src/components",
+          "@interface": "./src/@types/interface.ts",
+          "@containers": "./src/containers",
+          "@lib": "./src/lib",
+          "@store": "./src/store",
+          "@pages": "./src/pages"
+        }
+      }
+    ]
+  ]
+}
