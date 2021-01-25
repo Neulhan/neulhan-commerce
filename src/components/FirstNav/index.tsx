@@ -1,4 +1,4 @@
-import style from "./FrontierNavigation.module.scss";
+import style from "./index.module.scss";
 
 function FrontierNavigationComponent() {
   return (

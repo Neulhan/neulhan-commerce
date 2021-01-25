@@ -1,0 +1,15 @@
+@import "../../pages/def";
+
+.nav {
+  @include custom-flex(center, center);
+  height: 44px;
+  border-bottom: 1px solid #cbcbcb;
+
+  .container {
+    .text {
+      color: #f5f5f7;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+}
