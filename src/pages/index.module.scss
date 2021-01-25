@@ -1,0 +1,11 @@
+@import "./def";
+h1.neulhan {
+  font-size: 100px;
+  span {
+    color: red;
+  }
+}
+
+.wrapper {
+  @include custom-flex(center, center);
+}
