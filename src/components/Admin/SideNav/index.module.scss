@@ -1,0 +1,30 @@
+@import "../../../pages/def";
+
+.side-nav {
+  width: 220px;
+  background-color: #292931;
+  height: 100vh;
+
+  .navHeader {
+    padding: 32px 16px;
+    color: white;
+    background-color: #0071e3;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .adminList {
+    background-color: #444;
+
+    li {
+      border-bottom: 1px solid #515154;
+
+      .link {
+        display: block;
+        padding: 16px;
+        color: white;
+      }
+    }
+  }
+}
