@@ -1,0 +1,8 @@
+@import "../../pages/def";
+.container {
+  @include custom-flex(center, center, row, nowrap);
+  .content {
+    width: calc(100vw - 220px);
+    height: 100vh;
+  }
+}
