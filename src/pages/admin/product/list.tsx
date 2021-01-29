@@ -1,3 +1,4 @@
+import { GetProducts } from "@src/@types/product";
 import AdminContainer from "@src/containers/AdminContainer";
 import ProductListContainer from "@src/containers/AdminContainer/Product/List/index.tsx";
 import { GetStaticProps } from "next";
@@ -11,12 +12,10 @@ function ProductListAdmin({ products }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // Call an external API endpoint to get posts
-  const res = await fetch("http://localhost:8000/products/");
-  const data = await res.json();
+  const products = await GetProducts();
   return {
     props: {
-      products: data,
+      products,
     },
   };
 };
