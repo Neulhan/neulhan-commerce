@@ -1,6 +1,7 @@
 @import "./def";
 h1.neulhan {
-  font-size: 100px;
+  font-size: 108px;
+  text-align: center;
   span {
     color: red;
   }
@@ -8,16 +9,39 @@ h1.neulhan {
 
 .wrapper {
   @include custom-flex(center, center);
+  height: calc(100vh - 128px);
+}
 
-  .button {
-    width: 240px;
-    height: 44px;
-    background-color: #0071e3;
-    border: 1px solid #f5f5f7;
-    color: white;
-    cursor: pointer;
-    &:focus {
-      outline: none;
+.cardWrapper {
+  @include custom-flex(center, space-between);
+  li {
+    list-style: none;
+    .card {
+      margin-bottom: 24px;
+      .image {
+        width: 330px;
+        height: 330px;
+        overflow: hidden;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-size 0.6s;
+        &:hover {
+          background-size: 105%;
+        }
+      }
+      .name {
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 24px;
+      }
+      .price {
+        text-decoration: line-through;
+        color: #444;
+      }
+      .promotion {
+        font-size: 1.5em;
+      }
     }
   }
 }
