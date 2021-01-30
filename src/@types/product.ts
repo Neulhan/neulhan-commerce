@@ -12,34 +12,34 @@ export interface Product {
 }
 
 export function DeleteProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:8000/products", {
+  return fetch("http://localhost:9000/products", {
     method: "DELETE",
     body: JSON.stringify(product),
   }).then((response) => response.json());
 }
 
 export function CreateProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:8000/products", {
+  return fetch("http://localhost:9000/products", {
     method: "POST",
     body: JSON.stringify(product),
   }).then((response) => response.json());
 }
 
 export function UpdateProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:8000/products/update", {
+  return fetch("http://localhost:9000/products/update", {
     method: "POST",
     body: JSON.stringify(product),
   }).then((response) => response.json());
 }
 
 export function GetProducts(): Promise<Response> {
-  return fetch("http://localhost:8000/products", {
+  return fetch("http://localhost:9000/products", {
     method: "GET",
   }).then((response) => response.json());
 }
 
 export function GetProductByID(id: number): Promise<Response> {
-  return fetch(`http://localhost:8000/products/${id}`, {
+  return fetch(`http://localhost:9000/products/${id}`, {
     method: "GET",
   }).then((response) => response.json());
 }
