@@ -1,0 +1,48 @@
+@import "../def";
+
+.detail-header {
+  margin-top: 48px;
+  width: 100%;
+  @include custom-flex(flex-start, space-between);
+  .left {
+    width: calc(50% - 16px);
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .right {
+    width: calc(50% - 16px);
+    .product-name {
+      font-size: 40px;
+      font-weight: 500;
+      color: #111;
+    }
+    .desc {
+      color: #444;
+    }
+    .price {
+      margin-top: 48px;
+      font-size: 32px;
+      color: #444;
+    }
+    .button-wrapper {
+      margin-top: 24px;
+      width: 100%;
+      @include custom-flex(center, space-between);
+      button {
+        cursor: pointer;
+        width: calc(50% - 12px);
+        height: 48px;
+        border: none;
+        &:hover {
+          filter: brightness(0.9);
+        }
+        &:last-child {
+          color: white;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}

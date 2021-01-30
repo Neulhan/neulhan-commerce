@@ -13,7 +13,7 @@ function ProductUpdateAdmin({ product }: { product: Product }) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Call an external API endpoint to get posts
-  const res = await fetch("http://127.0.0.1:8000/products", {
+  const res = await fetch("http://127.0.0.1:9000/products", {
     method: "GET",
   });
   const products = await res.json();
