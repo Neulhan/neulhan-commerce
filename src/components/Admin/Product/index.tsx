@@ -1,13 +1,21 @@
 import { DeleteProduct, Product } from "@src/@types/product";
 import style from "./index.module.scss";
-import useProductsSWR from "@src/swr/products";
 import Router from "next/router";
+import { Dispatch, SetStateAction } from "react";
 
-function ProductComponent({ product }: { product: Product }) {
+function ProductComponent({
+  product,
+  productList,
+  setProductList,
+}: {
+  product: Product;
+  productList: Product[];
+  setProductList: Dispatch<SetStateAction<Product[]>>;
+}) {
   const onClick = async () => {
-    const res = await DeleteProduct(product);
+    const res: Response = await DeleteProduct(product);
     if (res.status === "success") {
-      location.reload();
+      setProductList(productList.filter((p) => p.ID !== product.ID));
     } else {
       alert("삭제실패");
     }
