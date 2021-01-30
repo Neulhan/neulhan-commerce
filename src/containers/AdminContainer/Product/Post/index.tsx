@@ -15,8 +15,8 @@ function AdminProductPostContainer(props: Props) {
 
   const handleChange = (e) => {
     const value = e.target.value;
-    product[e.target.name] = isNaN(+value) ? value : +value;
-    setProduct(product);
+    product[e.target.name] = isNaN(parseInt(value)) ? value : +value;
+    setProduct({ ...product });
   };
 
   const handleClick = () => {
@@ -32,19 +32,50 @@ function AdminProductPostContainer(props: Props) {
     <div className={style.container}>
       <h1>{productDefault ? "상품수정" : "상품등록"}</h1>
       <p>상품이름</p>
-      <input type="text" name="productName" onChange={handleChange} />
+      <input
+        type="text"
+        value={product.productName}
+        name="productName"
+        onChange={handleChange}
+      />
       <p>사진</p>
-      <input type="text" name="img" onChange={handleChange} />
+      <input
+        type="text"
+        value={product.img}
+        name="img"
+        onChange={handleChange}
+      />
       <p>사진 alt</p>
-      <input type="text" name="imgAlt" onChange={handleChange} />
+      <input
+        type="text"
+        value={product.imgAlt}
+        name="imgAlt"
+        onChange={handleChange}
+      />
       <p>가격</p>
-      <input type="number" name="price" onChange={handleChange} />
+      <input
+        type="number"
+        value={product.price}
+        name="price"
+        onChange={handleChange}
+      />
       <p>할인가</p>
-      <input type="number" name="promotion" onChange={handleChange} />
+      <input
+        type="number"
+        value={product.promotion}
+        name="promotion"
+        onChange={handleChange}
+      />
       <p>상품설명</p>
-      <input type="text" name="desc" onChange={handleChange} />
+      <input
+        type="text"
+        value={product.desc}
+        name="desc"
+        onChange={handleChange}
+      />
       <button onClick={handleClick}>등록하기</button>
     </div>
   );
 }
+
 export default AdminProductPostContainer;
