@@ -6,7 +6,7 @@ nav.second {
   height: 44px;
 
   .innerContainer {
-    @include custom-flex(center, flex-start);
+    @include custom-flex(center, space-between);
 
     a {
       @include custom-flex(center, flex-start);
@@ -22,6 +22,17 @@ nav.second {
         span {
           color: #11dddd;
         }
+      }
+    }
+
+    // .left {
+    // }
+    .right {
+      @include custom-flex(center, center);
+      color: white;
+      font-size: 12px;
+      a:not(:last-child) {
+        margin-right: 8px;
       }
     }
   }
