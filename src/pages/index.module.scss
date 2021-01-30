@@ -3,31 +3,33 @@ h1.neulhan {
   font-size: 108px;
   text-align: center;
   span {
-    color: red;
+    color: #11dddd;
   }
 }
 
 .wrapper {
   @include custom-flex(center, center);
-  height: calc(100vh - 128px);
+  min-height: calc(100vh - 128px);
+  padding: 48px 0;
 }
 
 .cardWrapper {
   @include custom-flex(center, space-between);
   li {
     list-style: none;
+    cursor: pointer;
     .card {
       margin-bottom: 24px;
       .image {
         width: 330px;
         height: 330px;
         overflow: hidden;
-        background-size: 100%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        transition: background-size 0.6s;
+        transition: transform 0.6s;
         &:hover {
-          background-size: 105%;
+          transform: scale(1.03);
         }
       }
       .name {
