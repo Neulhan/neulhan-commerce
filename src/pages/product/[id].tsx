@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { GetProductByID, GetProducts } from "@src/@types/product";
-import MainContainer from "@src/containers/AdminContainer/MainContainer";
+import MainContainer from "@src/containers/MainContainer";
 import style from "./index.module.scss";
 
 function PostDetail({ product }) {

@@ -1,7 +1,7 @@
 import style from "./index.module.scss";
 import FirstNav from "@components/FirstNav";
-import SecondNav from "@src/components/SecondNav";
-import ThirdNav from "@src/components/ThirdNav";
+import SecondNav from "@components/SecondNav";
+import ThirdNav from "@components/ThirdNav";
 
 function MainContainer({ children }) {
   return (

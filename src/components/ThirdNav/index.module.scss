@@ -5,6 +5,7 @@
   top: 0px;
   @include custom-flex(center, center);
   height: 44px;
+  z-index: 100;
   border-bottom: 1px solid #cbcbcb;
   background-color: rgba(255, 255, 255, 0.72);
   -webkit-backdrop-filter: saturate(180%) blur(20px);

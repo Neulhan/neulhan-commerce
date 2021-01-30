@@ -14,12 +14,16 @@ h1.neulhan {
 }
 
 .cardWrapper {
-  @include custom-flex(center, space-between);
+  @include custom-flex(center, flex-start);
   li {
     list-style: none;
     cursor: pointer;
+    margin-bottom: 24px;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 25px;
+    }
     .card {
-      margin-bottom: 24px;
       .image {
         width: 330px;
         height: 330px;

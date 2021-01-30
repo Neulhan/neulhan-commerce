@@ -2,7 +2,7 @@ import style from "./index.module.scss";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import { GetProducts } from "@src/@types/product";
-import MainContainer from "@src/containers/AdminContainer/MainContainer";
+import MainContainer from "@src/containers/MainContainer";
 
 function HomePage({ products }) {
   return (
@@ -19,8 +19,8 @@ function HomePage({ products }) {
           <div className="container">
             <ul className={style.cardWrapper}>
               {products.map((p) => (
-                <Link href={`/product/${p.ID}`}>
-                  <li key={p.ID}>
+                <Link key={p.ID} href={`/product/${p.ID}`}>
+                  <li>
                     <div className={style.card}>
                       <div
                         className={style.image}
