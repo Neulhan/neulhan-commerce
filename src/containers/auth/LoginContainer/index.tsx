@@ -1,3 +1,5 @@
+import KakaoLoginButton from "@src/components/Auth/KakaoLoginButton";
+import GithubLoginButton from "@src/components/Auth/GithubLoginButton";
 import style from "./index.module.scss";
 
 function LoginContainer() {
@@ -5,9 +7,11 @@ function LoginContainer() {
     <div className={style["login-container"]}>
       <div className={style["login-box"]}>
         <div className={style.title}>로그인</div>
-        <input placeholder="아이디" type="text" />
-        <input placeholder="비밀번호" type="text" />
-        <button className={style.submit}>로그인</button>
+        <div className={style["sub-text"]}>
+          늘한 커머스에 로그인하고 각종 상품들을 찾아보세요.
+        </div>
+        <KakaoLoginButton></KakaoLoginButton>
+        <GithubLoginButton></GithubLoginButton>
       </div>
     </div>
   );
