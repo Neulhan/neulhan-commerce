@@ -1,4 +1,4 @@
-import { GetProductByID, Product } from "@src/@types/product";
+import { GetProductByID, GetProducts, Product } from "@src/@types/product";
 import AdminContainer from "@src/containers/AdminContainer";
 import ProductUpdateContainer from "@src/containers/AdminContainer/Product/Post/index.tsx";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -13,10 +13,7 @@ function ProductUpdateAdmin({ product }: { product: Product }) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Call an external API endpoint to get posts
-  const res = await fetch("http://127.0.0.1:9000/products", {
-    method: "GET",
-  });
-  const products = await res.json();
+  const products = await GetProducts();
 
   const paths = products.map(
     (product) => `/admin/product/update/${product.ID}`
