@@ -28,7 +28,8 @@ module.exports = (phase, { defaultConfig }) => {
       },
       env: {
         TEST: process.env.TEST,
-        API_URL: process.env.API_URL,
+        API_URL_PRD: process.env.API_URL_PRD,
+        API_URL_DEV: process.env.API_URL_DEV,
         KAKAO_TOKEN: process.env.KAKAO_TOKEN,
         GITHUB_TOKEN: process.env.GITHUB_TOKEN,
         APPLE_CLIENT_ID: process.env.APPLE_CLIENT_ID,
