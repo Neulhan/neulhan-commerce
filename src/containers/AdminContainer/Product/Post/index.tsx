@@ -11,7 +11,18 @@ function AdminProductPostContainer(props: Props) {
   const { product: productDefault } = props;
   const [product, setProduct] = productDefault
     ? useState<Product>(productDefault)
-    : useState<Product>({});
+    : useState<Product>({
+        ID: undefined,
+        CreatedAt: undefined,
+        UpdatedAt: undefined,
+        DeletedAt: undefined,
+        productName: "",
+        desc: "",
+        img: "",
+        imgAlt: "",
+        price: 0,
+        promotion: 0,
+      });
 
   const handleChange = (e) => {
     const value = e.target.value;
