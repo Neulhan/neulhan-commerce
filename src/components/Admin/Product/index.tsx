@@ -1,4 +1,4 @@
-import { DeleteProduct, Product } from "@src/@types/product";
+import { DeleteProductByID, Product } from "@src/@types/product";
 import style from "./index.module.scss";
 import Router from "next/router";
 import { Dispatch, SetStateAction } from "react";
@@ -13,8 +13,8 @@ function ProductComponent({
   setProductList: Dispatch<SetStateAction<Product[]>>;
 }) {
   const onClick = async () => {
-    const res: Response = await DeleteProduct(product);
-    if (res.status === "success") {
+    const data = await DeleteProductByID(parseInt(product.ID));
+    if (data.status === "success") {
       setProductList(productList.filter((p) => p.ID !== product.ID));
     } else {
       alert("삭제실패");

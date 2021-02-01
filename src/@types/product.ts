@@ -1,3 +1,5 @@
+import api from "@src/api";
+
 export interface Product {
   ID: string | undefined;
   CreatedAt: Date | undefined;
@@ -11,35 +13,27 @@ export interface Product {
   promotion: number;
 }
 
-export function DeleteProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:9000/products", {
-    method: "DELETE",
-    body: JSON.stringify(product),
-  }).then((response) => response.json());
+export async function DeleteProductByID(id: number) {
+  const { data } = await api.delete(`/products/${id}`);
+  return data;
 }
 
-export function CreateProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:9000/products", {
-    method: "POST",
-    body: JSON.stringify(product),
-  }).then((response) => response.json());
+export async function CreateProduct(product: Product) {
+  const { data } = await api.post("/products", { ...product });
+  return data;
 }
 
-export function UpdateProduct(product: Product): Promise<Response> {
-  return fetch("http://localhost:9000/products/update", {
-    method: "POST",
-    body: JSON.stringify(product),
-  }).then((response) => response.json());
+export async function UpdateProduct(product: Product) {
+  const { data } = await api.post("/products/update", { ...product });
+  return data;
 }
 
-export function GetProducts(): Promise<Response> {
-  return fetch("http://localhost:9000/products", {
-    method: "GET",
-  }).then((response) => response.json());
+export async function GetProducts() {
+  const { data } = await api.get("/products");
+  return data;
 }
 
-export function GetProductByID(id: number): Promise<Response> {
-  return fetch(`http://localhost:9000/products/${id}`, {
-    method: "GET",
-  }).then((response) => response.json());
+export async function GetProductByID(id: number) {
+  const { data } = await api.get(`/products/${id}`);
+  return data;
 }
