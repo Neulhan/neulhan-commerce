@@ -1,14 +1,12 @@
 import style from "./index.module.scss";
-import FirstNav from "@components/FirstNav";
-import SecondNav from "@components/SecondNav";
-import ThirdNav from "@components/ThirdNav";
+import MainNav from "@components/MainNav";
+import SubNav from "@components/SubNav";
 
 function MainContainer({ children }) {
   return (
     <>
-      <FirstNav></FirstNav>
-      <SecondNav></SecondNav>
-      <ThirdNav></ThirdNav>
+      <MainNav></MainNav>
+      <SubNav></SubNav>
       <div className={style.body}>{children}</div>
     </>
   );

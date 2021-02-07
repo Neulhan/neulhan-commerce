@@ -1,6 +1,6 @@
 import style from "./index.module.scss";
 
-function ThirdNavigationComponent() {
+function SubNavigationComponent() {
   return (
     <>
       <nav className={style.nav}></nav>
@@ -8,4 +8,4 @@ function ThirdNavigationComponent() {
   );
 }
 
-export default ThirdNavigationComponent;
+export default SubNavigationComponent;
