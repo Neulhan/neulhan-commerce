@@ -3,17 +3,14 @@ import Link from "next/link";
 import { GetStaticProps } from "next";
 import { GetProducts } from "@src/@types/product";
 import MainContainer from "@src/containers/MainContainer";
+import CarouselContainer from "@src/containers/MainLanding/CarouselContainer";
 
 function HomePage({ products }) {
   return (
     <>
       <MainContainer>
         <div className={style.wrapper}>
-          <div className="container">
-            <h1 className={style.neulhan}>
-              NEULHAN <span>COMMERCE</span>
-            </h1>
-          </div>
+          <CarouselContainer></CarouselContainer>
         </div>
         <div className={style.wrapper}>
           <div className="container">

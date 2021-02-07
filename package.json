@@ -20,6 +20,7 @@
     "react-dom": "^17.0.1",
     "react-github-login": "^1.0.3",
     "react-kakao-login": "^2.0.3",
+    "react-responsive-carousel": "^3.2.11",
     "sass": "^1.32.5"
   },
   "devDependencies": {
