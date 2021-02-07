@@ -1,8 +1,15 @@
 import KakaoLoginButton from "@src/components/Auth/KakaoLoginButton";
 import GithubLoginButton from "@src/components/Auth/GithubLoginButton";
 import style from "./index.module.scss";
+import { isLoggedIn } from "@src/@types/user";
+import Router from "next/router";
+import { LOGIN_REDIRECT_URL } from "@src/configs";
 
 function LoginContainer() {
+  if (isLoggedIn()) {
+    Router.push(LOGIN_REDIRECT_URL);
+  }
+
   return (
     <div className={style["login-container"]}>
       <div className={style["login-box"]}>
