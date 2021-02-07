@@ -1,4 +1,12 @@
+@import "../../../pages/def";
 .button {
   background-color: #24292e;
   color: white;
+  @include custom-flex(center, center);
+  img {
+    width: 16px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin-right: 8px;
+  }
 }
