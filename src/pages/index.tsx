@@ -9,8 +9,10 @@ function HomePage({ products }) {
   return (
     <>
       <MainContainer>
-        <div className={style.wrapper}>
-          <CarouselContainer></CarouselContainer>
+        <div className="container">
+          <div className={style["carousel-wrapper"]}>
+            <CarouselContainer></CarouselContainer>
+          </div>
         </div>
         <div className={style.wrapper}>
           <div className="container">
@@ -37,7 +39,6 @@ function HomePage({ products }) {
             </ul>
           </div>
         </div>
-        <div className={style.wrapper}></div>
       </MainContainer>
     </>
   );

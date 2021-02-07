@@ -1,8 +1,4 @@
 @import "./def";
-h1.title {
-  font-size: 108px;
-  text-align: center;
-}
 
 .wrapper {
   @include custom-flex(center, flex-start, column);
@@ -10,17 +6,38 @@ h1.title {
   min-height: calc(100vh - 100px);
 }
 
+.carousel-wrapper {
+  padding-bottom: $padding;
+  @include mobile {
+    padding-bottom: $padding-mobile;
+  }
+}
+
 .cardWrapper {
   @include custom-flex(center, flex-start);
+  @include mobile {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 $padding-mobile;
+  }
   li {
     list-style: none;
     cursor: pointer;
-    margin-bottom: 24px;
+    margin-bottom: $padding;
+    @include mobile {
+      width: 100%;
+    }
 
     &:not(:nth-child(3n)) {
       margin-right: 25px;
+      @include mobile {
+        margin-right: 0;
+      }
     }
     .card {
+      @include mobile {
+        width: 100%;
+      }
       .image {
         width: 330px;
         height: 330px;
@@ -29,6 +46,12 @@ h1.title {
         background-position: center;
         background-repeat: no-repeat;
         transition: transform 0.6s;
+
+        @include mobile {
+          width: 100%;
+          height: initial;
+          padding-bottom: 100%;
+        }
         &:hover {
           transform: scale(1.03);
         }
