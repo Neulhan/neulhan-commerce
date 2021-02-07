@@ -1,3 +1,28 @@
+$blue: #0070c9;
+$light-blue: #42a1ec;
+
+$padding: 24px;
+$padding-mobile: 16px;
+
+$breakpoint-desktop: 1041px;
+$breakpoint-mobile: 1040px;
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    & {
+      @content;
+    }
+  }
+}
+
 @mixin custom-flex($a: flex-start, $j: flex-start, $d: row, $w: wrap) {
   display: flex;
   align-items: $a;
@@ -5,6 +30,3 @@
   flex-direction: $d;
   flex-wrap: $w;
 }
-
-$blue: #0070c9;
-$light-blue: #42a1ec;

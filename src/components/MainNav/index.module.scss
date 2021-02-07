@@ -4,6 +4,9 @@ nav.second {
   @include custom-flex(center, center);
   background-color: #000000cc;
   height: 50px;
+  @include mobile {
+    padding: 0 $padding-mobile;
+  }
 
   .innerContainer {
     @include custom-flex(center, space-between);

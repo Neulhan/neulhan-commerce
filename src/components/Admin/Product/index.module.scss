@@ -29,7 +29,7 @@ li.product {
     height: 48px;
     background-color: #f56300;
     border: none;
-    background-image: url("/trashcan.svg");
+    background-image: url("/icon/trashcan.svg");
     background-repeat: no-repeat;
     background-size: 14px;
     background-position: center;
@@ -37,7 +37,7 @@ li.product {
     &.edit {
       margin-left: auto;
       background-color: #0071e3;
-      background-image: url("/edit.svg");
+      background-image: url("/icon/edit.svg");
     }
     &:hover {
       filter: brightness(0.9);

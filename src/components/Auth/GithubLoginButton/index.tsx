@@ -19,7 +19,7 @@ function GithubLoginButton() {
       onFailure={onFailure}
       className={style.button}
     >
-      <img src="/github.svg" alt="" /> 깃허브로 로그인
+      <img src="/icon/github.svg" alt="" /> 깃허브로 로그인
     </GitHubLogin>
   );
 }

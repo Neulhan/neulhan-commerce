@@ -27,7 +27,7 @@ function KakaoLoginButton() {
     >
       <img
         style={{ width: "16px", marginRight: "8px" }}
-        src="/kakao.svg"
+        src="/icon/kakao.svg"
         alt=""
       />{" "}
       카카오로 로그인
