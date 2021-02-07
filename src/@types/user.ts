@@ -20,6 +20,7 @@ export function Login() {
 
 export function Logout() {
   Cookies.remove("accessToken");
+  localStorage.removeItem("user");
   Router.push(LOGOUT_REDIRECT_URL);
 }
 
