@@ -16,10 +16,23 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  width: 1040px;
+@media (max-width: 1040px) {
+  .container {
+    width: 100%;
+  }
+  .desktop {
+    display: block;
+  }
 }
 
+@media (min-width: 1041px) {
+  .container {
+    width: 1040px;
+  }
+  .mobile {
+    display: none;
+  }
+}
 *:focus {
   outline: none;
 }
